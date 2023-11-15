@@ -1,0 +1,65 @@
+.servis
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #3D4A39;
+}
+.servic__title{
+    @include title;
+    color: #fff;
+    margin-bottom: 73px;
+}
+.servis__cards{
+    display: grid;
+    grid-template-columns: repeat(3,260px);
+   justify-content: space-between;
+    row-gap: 80px;
+   flex-wrap: wrap;
+}
+.servis__card{
+    text-align: center;
+    &::before{
+        content: "";
+        width: 100px;
+        height: 66px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-image: url(../../img/servis.svg);
+        margin-bottom: 30px;
+    }
+}
+.servis__text{
+    @include subTitle(46px,125%);
+    color: #fff;
+opacity: 0.5;
+}
+@media screen and (max-width:1260px) {
+    .servis__cards{
+        display: grid;
+        grid-template-columns: repeat(3,200px);
+        row-gap: 50px;
+    justify-content: space-between;
+    }
+    .servis__text{
+        font-size: 22px;
+        line-height: 135%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .servis{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .servis__cards{
+        display: grid;
+        grid-template-columns: repeat(2,81px);
+        row-gap: 50px;
+    justify-content: space-evenly;
+    }
+    .servis__text{
+        font-size: 18px;
+        line-height: 130%;
+    }
+
+}

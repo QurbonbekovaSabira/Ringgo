@@ -1,0 +1,110 @@
+.hero {
+
+  padding-top: 120px;
+  padding-bottom: 45px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/heroBG.svg);
+  background-position:center;
+  z-index: -1;
+}
+.hero__container{
+  text-align: center;
+}
+.hero__title {
+  color: #fff;
+  text-align: center;
+  font-family: Lato;
+  font-size: 50px;
+  font-weight: 700;
+  // line-height: 100%;
+  text-transform: uppercase;
+  max-width: 446px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero__text {
+  @include subTitle(18px, 150%);
+  max-width: 480px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+}
+.hero__btn {
+  @include btn;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 120px;
+}
+.hero__line {
+ 
+  display: block;
+  width: 100%;
+  opacity: 0.4;
+  background: #fff;
+  height: 1px;
+  margin-bottom: 47px;
+}
+.hero__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__links span{
+    &::before{
+        content: "";
+        height: 15px;
+        width: 21px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-image: url(../../img/HeroIcon1.svg);
+        margin-right: 25px;
+    }
+    &::after{
+        content: "";
+        height: 15px;
+        width: 21px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-image: url(../../img/HeroIcon2.svg);
+    }
+}
+.hero__links_text {
+  @include subTitle(16px, 100%);
+  text-align: center;
+  padding: 8px 11px;
+  color: #ffffff99;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ffffff99;
+  transition: all 0.4s ease;
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+}
+.hero__links_text:not(:first-child){
+    margin-left: 15px;
+}
+@media screen and (max-width:600px){
+  .hero__title{
+  font-size: 28px;
+  }
+  .hero{
+    background-position-x:right;
+  }
+}
+@media screen  and (max-width:380px){
+  .hero{
+    background-position-x:right;
+  }
+  .hero__links span{
+    display: none;
+  }
+  .hero__text_box{
+  margin-left: auto;
+  margin-right: auto;
+  }
+}
